@@ -5,16 +5,17 @@ plugins {
 
 android {
     namespace 'com.example.diceroller'
-    compileSdk 33
+    compileSdk 33 //Gradle이 앱을 컴파일하는 데 사용해야 하는 Android API 수준 지정
 
     defaultConfig {
         applicationId "com.example.diceroller"
-        minSdk 19
-        targetSdk 33
+        minSdk 19 //앱이 실행될 가장 오래된 Android 버전을 결정
+        targetSdk 33 //앱을 테스트한 가장 최근 API,compileSdk와 대부분 같은 값
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
